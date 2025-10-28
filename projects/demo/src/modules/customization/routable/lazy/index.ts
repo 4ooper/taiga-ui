@@ -10,7 +10,7 @@ import {TuiDemo} from '@demo/utils';
 export default class Page {
     protected readonly example1 = {
         'page.routes.ts': import('./routes.ts?raw'),
-        'page.template.html': import('./examples/1/index.html?raw'),
+        'page.template.html': import('./examples/1/index.html'),
         'page.ts': import('./examples/1/index.ts?raw'),
         'dialog.component.ts': import('./examples/1/dialog.component.ts?raw'),
     };

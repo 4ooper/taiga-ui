@@ -29,22 +29,18 @@ export default class Page {
         'Concurrency limit',
     ];
 
-    protected readonly method = import('./examples/import/method.md?raw');
+    protected readonly method = import('./examples/import/method.md');
 
-    protected readonly exampleServiceUsage = import(
-        './examples/import/service-usage.md?raw'
-    );
+    protected readonly exampleServiceUsage = import('./examples/import/service-usage.md');
 
     protected readonly exampleServiceUsageComponent = import(
-        './examples/import/service-usage-component.md?raw'
+        './examples/import/service-usage-component.md'
     );
 
-    protected readonly exampleCustomAlert = import(
-        './examples/import/custom-alert.md?raw'
-    );
+    protected readonly exampleCustomAlert = import('./examples/import/custom-alert.md');
 
-    protected readonly exampleLazyModule = import('./examples/import/lazy-module.md?raw');
-    protected readonly exampleOptions = import('./examples/import/define-options.md?raw');
+    protected readonly exampleLazyModule = import('./examples/import/lazy-module.md');
+    protected readonly exampleOptions = import('./examples/import/define-options.md');
 
     protected data = 100;
 

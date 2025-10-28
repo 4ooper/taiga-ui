@@ -19,9 +19,9 @@ export default class Example {
     ];
 
     protected readonly layerExample = {
-        HTML: import('./examples/7/index.html?raw'),
-        'surface.less': import('./examples/7/surface.less?raw'),
-        LESS: import('./examples/7/index.less?raw'),
+        HTML: import('./examples/7/index.html'),
+        'surface.less': import('./examples/7/surface.less'),
+        LESS: import('./examples/7/index.less'),
     };
 
     protected readonly routes = DemoRoute;
