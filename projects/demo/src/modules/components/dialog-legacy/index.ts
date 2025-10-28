@@ -29,10 +29,11 @@ export default class Page {
     );
 
     protected readonly example2 = {
-        TypeScript: import('./examples/2/index.ts?raw'),
+        TypeScript: import('./examples/2/index.ts?raw', {with: {loader: 'text'}}),
         HTML: import('./examples/2/index.html'),
         'dialog-example/dialog-example.component.ts': import(
-            './examples/2/dialog-example/dialog-example.component.ts?raw'
+            './examples/2/dialog-example/dialog-example.component.ts?raw',
+            {with: {loader: 'text'}}
         ),
         'dialog-example/dialog-example.style.less': import(
             './examples/2/dialog-example/dialog-example.style.less'
@@ -43,10 +44,11 @@ export default class Page {
     };
 
     protected readonly example7 = {
-        TypeScript: import('./examples/7/index.ts?raw'),
+        TypeScript: import('./examples/7/index.ts?raw', {with: {loader: 'text'}}),
         HTML: import('./examples/7/index.html'),
         'search-example/search-dialog-example.component.ts': import(
-            './examples/7/search-example/search-dialog-example.component.ts?raw'
+            './examples/7/search-example/search-dialog-example.component.ts?raw',
+            {with: {loader: 'text'}}
         ),
         'search-example/search-dialog-example.template.html': import(
             './examples/7/search-example/search-dialog-example.template.html'
@@ -57,15 +59,24 @@ export default class Page {
     };
 
     protected readonly example9 = {
-        TypeScript: import('./examples/9/index.ts?raw'),
+        TypeScript: import('./examples/9/index.ts?raw', {with: {loader: 'text'}}),
         HTML: import('./examples/9/index.html'),
         LESS: import('./examples/9/index.less'),
-        'helpers/mock-cards.ts': import('./examples/9/helpers/mock-cards.ts?raw'),
-        'helpers/models.ts': import('./examples/9/helpers/models.ts?raw'),
-        'helpers/pay.service.ts': import('./examples/9/helpers/pay.service.ts?raw'),
-        'helpers/validator.ts': import('./examples/9/helpers/validator.ts?raw'),
+        'helpers/mock-cards.ts': import('./examples/9/helpers/mock-cards.ts?raw', {
+            with: {loader: 'text'},
+        }),
+        'helpers/models.ts': import('./examples/9/helpers/models.ts?raw', {
+            with: {loader: 'text'},
+        }),
+        'helpers/pay.service.ts': import('./examples/9/helpers/pay.service.ts?raw', {
+            with: {loader: 'text'},
+        }),
+        'helpers/validator.ts': import('./examples/9/helpers/validator.ts?raw', {
+            with: {loader: 'text'},
+        }),
         'pay-modal/pay-modal.component.ts': import(
-            './examples/9/pay-modal/pay-modal.component.ts?raw'
+            './examples/9/pay-modal/pay-modal.component.ts?raw',
+            {with: {loader: 'text'}}
         ),
         'pay-modal/pay-modal.component.less': import(
             './examples/9/pay-modal/pay-modal.component.less'

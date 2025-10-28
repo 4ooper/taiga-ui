@@ -24,7 +24,8 @@ export default class Page {
             '../../../../../addon-doc/components/language-switcher/index.html'
         ),
         'language-switcher.ts': import(
-            '../../../../../addon-doc/components/language-switcher/index.ts?raw'
+            '../../../../../addon-doc/components/language-switcher/index.ts?raw',
+            {with: {loader: 'text'}}
         ),
         'language-switcher.less': import(
             '../../../../../addon-doc/components/language-switcher/index.less'

@@ -10,10 +10,10 @@ import {TuiDemo} from '@demo/utils';
 })
 export default class Page {
     protected readonly example5 = {
-        TypeScript: import('./examples/5/index.ts?raw'),
+        TypeScript: import('./examples/5/index.ts?raw', {with: {loader: 'text'}}),
         HTML: import('./examples/5/index.html'),
         LESS: import('./examples/5/index.less'),
-        'content.ts': import('./examples/5/content.ts?raw'),
+        'content.ts': import('./examples/5/content.ts?raw', {with: {loader: 'text'}}),
         'content.less': import('./examples/5/content.less'),
     };
 

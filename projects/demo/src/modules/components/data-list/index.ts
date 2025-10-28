@@ -23,9 +23,11 @@ export default class Page {
     protected size = this.sizeVariants[0]!;
 
     protected readonly example4 = {
-        TypeScript: import('./examples/4/index.ts?raw'),
+        TypeScript: import('./examples/4/index.ts?raw', {with: {loader: 'text'}}),
         HTML: import('./examples/4/index.html'),
-        'custom-list/index.ts': import('./examples/4/custom-list/index.ts?raw'),
+        'custom-list/index.ts': import('./examples/4/custom-list/index.ts?raw', {
+            with: {loader: 'text'},
+        }),
         'custom-list/index.html': import('./examples/4/custom-list/index.html'),
     };
 }
