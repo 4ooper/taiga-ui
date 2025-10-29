@@ -32,6 +32,7 @@
                 "index": "{projectRoot}/src/index.html",
                 "browser": "{projectRoot}/src/main.ts",
                 "polyfills": ["zone.js"],
+                "inlineStyleLanguage": "less",
                 "tsConfig": "{projectRoot}/tsconfig.app.json",
                 "assets": [
                     {

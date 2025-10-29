@@ -21,6 +21,8 @@ import {
     type TuiRectAccessor,
     type TuiVehicle,
 } from '@taiga-ui/core/classes';
+// TODO: find a way to avoid circular dependency TuiDropdownDirective <=> TuiDropdownPosition
+import {TuiDropdownPosition} from '@taiga-ui/core/directives/dropdown';
 import {TuiPopupService} from '@taiga-ui/core/directives/popup';
 import {tuiCheckFixedPosition} from '@taiga-ui/core/utils';
 import {
@@ -32,7 +34,6 @@ import {Subject, throttleTime} from 'rxjs';
 
 import {TuiDropdownDriver, TuiDropdownDriverDirective} from './dropdown.driver';
 import {TUI_DROPDOWN_COMPONENT} from './dropdown.providers';
-import {TuiDropdownPosition} from './dropdown-position.directive';
 
 @Directive({
     standalone: true,

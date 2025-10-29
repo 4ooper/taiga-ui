@@ -1,4 +1,4 @@
-import {type ApplicationRef, ErrorHandler, mergeApplicationConfig} from '@angular/core';
+import {type ApplicationRef, mergeApplicationConfig} from '@angular/core';
 import {bootstrapApplication, type BootstrapContext} from '@angular/platform-browser';
 import {provideServerRendering} from '@angular/platform-server';
 import {provideServerRouting, RenderMode, type ServerRoute} from '@angular/ssr';
@@ -8,7 +8,6 @@ import {UNIVERSAL_PROVIDERS} from '@ng-web-apis/universal';
 import {App} from './modules/app/app.component';
 import {config} from './modules/app/app.config';
 import {ROUTES} from './modules/app/app.routes';
-import {ServerErrorHandler} from './modules/app/server-error-handler';
 
 /* eslint-disable @typescript-eslint/require-await */
 
@@ -54,7 +53,8 @@ const serverConfig = mergeApplicationConfig(config, {
             }),
         ),
         UNIVERSAL_PROVIDERS,
-        {provide: ErrorHandler, useClass: ServerErrorHandler},
+        // TODO: enable me
+        // {provide: ErrorHandler, useClass: ServerErrorHandler},
     ],
 });
 
