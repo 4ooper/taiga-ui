@@ -36,14 +36,10 @@ export default class Page extends Array {
     ];
 
     protected readonly [2] = {
-        TypeScript: import('./examples/3/index.ts?raw', {with: {loader: 'text'}}),
-        HTML: import('./examples/3/index.html'),
         'component.ts': import('./examples/3/component.ts?raw', {with: {loader: 'text'}}),
     };
 
     protected readonly [4] = {
-        TypeScript: import('./examples/5/index.ts?raw', {with: {loader: 'text'}}),
-        HTML: import('./examples/5/index.html'),
         'service.ts': import('./examples/5/service.ts?raw', {with: {loader: 'text'}}),
     };
 

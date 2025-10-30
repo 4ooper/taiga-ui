@@ -29,8 +29,6 @@ export default class Page {
     );
 
     protected readonly example2 = {
-        TypeScript: import('./examples/2/index.ts?raw', {with: {loader: 'text'}}),
-        HTML: import('./examples/2/index.html'),
         'dialog-example/dialog-example.component.ts': import(
             './examples/2/dialog-example/dialog-example.component.ts?raw',
             {with: {loader: 'text'}}
@@ -44,8 +42,6 @@ export default class Page {
     };
 
     protected readonly example7 = {
-        TypeScript: import('./examples/7/index.ts?raw', {with: {loader: 'text'}}),
-        HTML: import('./examples/7/index.html'),
         'search-example/search-dialog-example.component.ts': import(
             './examples/7/search-example/search-dialog-example.component.ts?raw',
             {with: {loader: 'text'}}
@@ -59,9 +55,6 @@ export default class Page {
     };
 
     protected readonly example9 = {
-        TypeScript: import('./examples/9/index.ts?raw', {with: {loader: 'text'}}),
-        HTML: import('./examples/9/index.html'),
-        LESS: import('./examples/9/index.less'),
         'helpers/mock-cards.ts': import('./examples/9/helpers/mock-cards.ts?raw', {
             with: {loader: 'text'},
         }),
