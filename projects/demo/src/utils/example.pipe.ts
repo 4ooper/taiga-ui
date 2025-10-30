@@ -30,12 +30,10 @@ export class TuiExamplePipe implements PipeTransform {
         return Object.fromEntries(
             formats
                 .split(',')
-                .filter((x) => x !== 'ts')
                 .map((format) => [
-                    format.toUpperCase(),
-                    load(`${directory}/index.${format}`),
+                    format === 'ts' ? 'TypeScript' : format.toUpperCase(),
+                    format === 'ts' ? ts : load(`${directory}/index.${format}`),
                 ])
-                .concat([['TypeScript', ts]])
                 .concat(additionalFiles ? Object.entries(additionalFiles) : [])
                 .map(([name, content]) => [
                     name,
