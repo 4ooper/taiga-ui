@@ -15,6 +15,8 @@ import {
     type TuiRectAccessor,
     type TuiVehicle,
 } from '@taiga-ui/core/classes';
+// TODO: find a way to avoid circular dependency TuiHintDirective <=> TuiHintPosition
+import {TuiHintPosition} from '@taiga-ui/core/directives/hint';
 import {TuiPopupService} from '@taiga-ui/core/directives/popup';
 import {PolymorpheusComponent, type PolymorpheusContent} from '@taiga-ui/polymorpheus';
 
@@ -22,7 +24,6 @@ import {TUI_HINT_COMPONENT} from './hint.providers';
 import {TuiHintDriver} from './hint-driver.directive';
 import {TuiHintHover} from './hint-hover.directive';
 import {TUI_HINT_OPTIONS} from './hint-options.directive';
-import {TuiHintPosition} from './hint-position.directive';
 
 @Directive({
     selector: '[tuiHint]:not(ng-container):not(ng-template)',
