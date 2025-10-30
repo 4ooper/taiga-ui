@@ -1,9 +1,23 @@
 @import '@taiga-ui/core/styles/taiga-ui-local';
 
-.dropdown {
+[role='listbox'] {
+    display: grid;
+    gap: 0.25rem;
+    min-inline-size: 14rem;
+    padding: 0.5rem;
+}
+
+[tuiCell] {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.125rem;
+    text-align: start;
+    inline-size: calc(100% - 2rem);
+}
+
+[tuiSubtitle] {
+    color: var(--tui-text-03);
     font-size: 0.8125rem;
-    line-height: 1.25rem;
-    text-transform: uppercase;
-    letter-spacing: 0.075em;
-    padding: 0.25rem 0.75rem;
+    line-height: 1.125rem;
 }

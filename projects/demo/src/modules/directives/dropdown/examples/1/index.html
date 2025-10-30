@@ -2,15 +2,27 @@
     tuiButton
     tuiChevron
     type="button"
+    [attr.aria-expanded]="open()"
     [tuiDropdown]="dropdownContent"
-    [tuiDropdownManual]="open"
-    [tuiObscuredEnabled]="open"
+    [tuiDropdownManual]="open()"
+    [tuiObscuredEnabled]="open()"
     (click)="onClick()"
     (tuiActiveZoneChange)="onActiveZone($event)"
     (tuiObscured)="onObscured($event)"
 >
-    Choose
+    {{ buttonLabel() }}
     <ng-template #dropdownContent>
-        <div class="dropdown">But there is nothing to choose...</div>
+        <div role="listbox">
+            @for (action of actions; track action.title) {
+                <button
+                    tuiCell
+                    type="button"
+                    (click)="onSelect(action)"
+                >
+                    <span tuiTitle>{{ action.title }}</span>
+                    <span tuiSubtitle>{{ action.description }}</span>
+                </button>
+            }
+        </div>
     </ng-template>
 </button>
